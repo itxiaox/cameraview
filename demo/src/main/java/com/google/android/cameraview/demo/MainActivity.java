@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity implements
     protected void onDestroy() {
         super.onDestroy();
         if (mBackgroundHandler != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {//>18
                 mBackgroundHandler.getLooper().quitSafely();
             } else {
                 mBackgroundHandler.getLooper().quit();
